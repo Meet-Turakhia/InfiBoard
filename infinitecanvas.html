@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="public/css/infinitecanvas.css">
+    <link rel="shortcut icon" type="image/jpg" href="https://img.icons8.com/ios-filled/50/fa314a/infinity-large.png" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/e9ea717be9.js" crossorigin="anonymous"></script>
+    <title>InfiBoard</title>
+</head>
+
+<body>
+
+    <div class="field">
+        <canvas id="canvas" src="public/image/canvas.png"></canvas>
+        <div class="tools">
+            <input type="file" id="load" name="myfile">
+            <button onclick="undo_last()" type="button" class="button">Undo</button>
+            <button onclick="clear_canvas()" type="button" class="button">Clear</button>
+            <button id="save" type="button" class="button">Save</button>
+
+            <div onclick="change_color(this)" class="color-field" style="background: red;"></div>
+            <div onclick="change_color(this)" class="color-field" style="background: blue;"></div>
+            <div onclick="change_color(this)" class="color-field" style="background: green;"></div>
+            <div onclick="change_color(this)" class="color-field" style="background: yellow;"></div>
+            <div onclick="change_color(this)" class="color-field" style="background: white;"></div>
+
+            <input oninput="draw_color = this.value" type="color" class="color-picker">
+            <input oninput="draw_width = this.value" type="range" min="1" max="100" value="1" class="pen-range">
+        </div>
+    </div>
+
+</body>
+
+<script type="text/javascript" src="public/js/infinitecanvas.js"></script>
+
+</html>
