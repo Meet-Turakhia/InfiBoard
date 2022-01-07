@@ -6,9 +6,9 @@ context.fillStyle = start_background_color;
 var reader = new FileReader();
 
 // disable right clicking
-// document.oncontextmenu = function () {
-//     return false;
-// }
+document.oncontextmenu = function () {
+    return false;
+}
 
 // list of all strokes drawn
 let drawings = [];
